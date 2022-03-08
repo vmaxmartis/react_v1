@@ -1,0 +1,283 @@
+@font-face {
+  font-family: Vogue;
+  src: url(./font/vogue/Vogue.ttf);
+}
+body {
+  max-width: 810px;
+  max-height: 540px;
+  margin: auto;
+  margin-top: 63px;
+  padding: 18px;
+}
+
+.todoapp {
+  border-radius: 9px;
+  width: 500px;
+  background : linear-gradient(to right, rgba(228, 107, 192, 0.651), rgba(104, 216, 231, 0.733));
+  margin: 144px auto;
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(68, 32, 71, 0.589), 0 18px 27px 0 rgba(43, 71, 83, 0.247);
+}
+
+.todo-list {
+  font-family: 'Segoe UI Light';
+  margin: auto;
+  list-style: none;
+}
+
+.todo-list li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #3b0a47b9;
+}
+
+.todo-list li .toggle {
+  height: 54px;
+  background: none;
+  opacity: 0;
+  text-align: left;
+  width: 54px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="checkbox" i] {
+  background-color: initial;
+  cursor: default;
+  -webkit-appearance: checkbox;
+  box-sizing: border-box;
+  margin: 3px 3px 3px 4px;
+  padding: 9px;
+  border: initial;
+}
+
+.todo-list li label {
+  border-radius: 9%;
+  background-repeat: no-repeat;
+  background-position: center left;
+  word-break: break-all;
+  padding: 15px 15px 15px 60px;
+  display: block;
+  line-height: 18px;
+  transition: color 0.4s;
+}
+
+.todo-list li .toggle:checked + label {
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
+}
+
+.todo-list li {
+  font-family: 'Segoe UI Light';
+  position: none;
+  font-size: 25px;
+  border-bottom: 9px solid rgba(247, 246, 248, 0.315);
+}
+
+.todo-list li .destroy {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto, 0;
+  margin-right: 27px;
+  font-size: 18px;
+  color: #382828;
+  transition: color 0.2s ease-out;
+}
+
+.todo-list li:hover .destroy {
+  display: block;
+}
+
+.todo-list li .destroy:after {
+  content: 'Delete';
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: 'Segoe UI Light';
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo-list li .edit {
+  /* font-family: 'Segoe UI Light'; */
+  display: none;
+}
+
+.new-todo, .edit {
+  font-family: 'Segoe UI Light';
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  
+  font-weight: inherit;
+  line-height: 1%;
+  border: 0;
+  color: inherit;
+  padding: 6px;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.new-todo {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+
+.todoapp h1 {
+  font-family: 'Vogue';
+  position: absolute;
+  top: -160px;
+  width: 100%;
+  font-size: 90px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(66, 66, 34, 0.876);
+  
+}
+
+.toggle-all, .todo-list li .toggle {
+  /* font-family: 'Segoe UI Light'; */
+  background: none;
+}
+
+.toggle-all {
+  text-align: center;
+  border: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.toggle-all + label {
+  width: 60px;
+  height: 45px;
+  font-size: 24px;
+  position: absolute;
+  top: -52px;
+  left: -13px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.toggle-all + label:before {
+  content: '❯';
+  font-size: 22px;
+  color: #0a0a0a;
+  padding: 9px 27px 9px 27px;
+}
+
+.toggle-all:checked + label:before {
+  color: #0f0f0fe7;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #e6e6e6;
+}
+
+.footer {
+  color: rgba(46, 42, 42, 0.37);
+  padding: 18px 9px;
+  height: 18px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.footer:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 54px;
+  overflow: hidden;
+}
+
+.todo-count {
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  float: left;
+  text-align: left;
+}
+
+.filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.clear-completed, html .clear-completed:active {
+  float: right;
+  position: relative;
+  line-height: 27px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filters li a.selected {
+  font-family: 'Segoe UI Light';
+  border-color: rgba(64, 57, 94, 0.959);
+  size: 9px;
+}
+.filters li a {
+  font-family: 'Segoe UI Light';
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.filters li {
+  display: inline;
+}
+
+.todo-list li.editing:last-child {
+  margin-bottom: -1px;
+}
+.todo-list li.editing {
+  border-bottom: none;
+  padding: 0;
+}
+.todo-list li.editing .edit {
+  font-family: 'Segoe UI Light';
+  display: block ;
+  width: 100%;
+  height:45px;
+  margin: 0 0 0 0%;
+}
+
+.todo-list li.completed label {
+  size: 20px;
+  color: #000000;
+  text-decoration: line-through;
+}

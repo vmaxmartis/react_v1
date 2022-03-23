@@ -9,47 +9,43 @@ body {
   margin-top: 63px;
   padding: 18px;
 }
-.app{
-  width: 100%;
-  text-align:  center;
-  background-image: linear-gradient(to right,rgba(243, 199, 199, 0.322), rgba(182, 118, 123, 0.116));
+
+.todoapp {
+  border-radius: 9px;
+  width: 500px;
+  background : linear-gradient(to right, rgba(228, 107, 192, 0.651), rgba(104, 216, 231, 0.733));
+  margin: 144px auto;
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(68, 32, 71, 0.589), 0 18px 27px 0 rgba(43, 71, 83, 0.247);
 }
+
 .todo-list {
-  text-align: center;
-  margin :auto;
-  width: 360px;
   font-family: 'Segoe UI Light';
+  margin: auto;
+  list-style: none;
 }
 
-.input{
-  background-image: linear-gradient(to right, rgba(13, 178, 243, 0.493), rgba(214, 140, 192, 0.452));
-  border-radius: 4px;
-  height: 27px;
-  margin-top: 2px;
-  margin-left: 9px;
-  width: 180px;
-  font-family: 'Segoe UI Light';
-
-}
-.view{
-  
-  border-bottom: 2px solid rgba(80, 65, 65, 0.425);
-  margin-top: 4px;
-  height: 36px;
-  margin-left: 9px;
-  margin-top:9px
+.todo-list li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #3b0a47b9;
 }
 
-.butt{
-  background-image: linear-gradient(to right, rgba(13, 178, 243, 0.192), rgba(214, 140, 192, 0.212));
-  margin-left: 9px;
-  height:27px;
-  width: 63px;
+.todo-list li .toggle {
+  height: 54px;
+  background: none;
+  opacity: 0;
+  text-align: left;
+  width: 54px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
-
-
-
-
 
 input[type="checkbox" i] {
   background-color: initial;
@@ -107,13 +103,19 @@ input[type="checkbox" i] {
 }
 
 button {
-  background-image: linear-gradient(to right, rgba(13, 178, 243, 0.493), rgba(45, 202, 84, 0.452));
-  border-radius: 4px;
-  height: 27px;
-  margin-top: 2px;
-  margin-left: 9px;
-  width: 90px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
   font-family: 'Segoe UI Light';
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .todo-list li .edit {
@@ -278,103 +280,4 @@ button {
   size: 20px;
   color: #000000;
   text-decoration: line-through;
-}
-
-
-.content {
-  width: 94%;
-  margin: 4em auto;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: justify;
-}
-
-.logo {
-  line-height: 60px;
-  position: fixed;
-  float: left;
-  margin: 16px 46px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  line-height: 60px;
-}
-
-nav ul {
-  line-height: 60px;
-  list-style: none;
-  background: rgba(0, 0, 0, 0);
-  overflow: hidden;
-  color: #fff;
-  padding: 0;
-  text-align: right;
-  margin: 0;
-  padding-right: 40px;
-  transition: 1s;
-}
-
-nav.black ul {
-  background: #000;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 16px 40px;;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-}
-
-.menu-icon {
-  line-height: 60px;
-  width: 100%;
-  background: #000;
-  text-align: right;
-  box-sizing: border-box;
-  padding: 15px 24px;
-  cursor: pointer;
-  color: #fff;
-  display: none;
-}
-
-@media(max-width: 786px) {
-
-  .logo {
-        position: fixed;
-        top: 0;
-        margin-top: 16px;
-  }
-
-  nav ul {
-        max-height: 0px;
-        background: #000;
-  }
-
-  nav.black ul {
-        background: #000;
-  }
-
-  .showing {
-        max-height: 34em;
-  }
-
-  nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
-  }
-
-  .menu-icon {
-        display: block;
-  }
 }
